@@ -1,0 +1,127 @@
+@mixin dropdown-btn($bg-color,  $btn-text-color,
+                    $paddings, $radius-px,
+                    $hover-color) {
+                    .dropbtn {
+                        cursor: pointer;
+                        border: none;
+                        background-color: $bg-color;
+                        text-align: center;
+                        
+                        color: $btn-text-color;
+                        padding: $paddings;
+                        border-radius: $radius-px;
+                        &:hover {
+                            color: $hover-color;
+                            }
+                        }
+}
+@mixin dropdown-content($c-bg-color, $from-top,
+                        $from-left){
+    .dropdown-content {
+        position: absolute;
+        display: none;
+        z-index: 2;
+        border-radius: 5px;
+        width: max-content;
+        background-color: $c-bg-color;
+        top: $from-top;  
+        left: $from-left;
+        a {
+            display: block;
+            color: $bg-gray;
+            &:hover {
+                color: $main-green;
+            }
+        }
+    }
+}
+
+
+@mixin karusel ($k-height, $from-prev-btn){
+    [data-carousel] {
+        position: relative;
+        height: $k-height;
+        button {
+            position: absolute;
+            top: -55px;
+            z-index: 1;
+            padding: 6px;
+            border:none;
+            background-color: transparent;
+            span {
+                color: inherit;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover{
+                span{
+                    color: $main-green !important;
+                }
+            }
+        }
+        .prev{
+            right: $from-prev-btn;
+        }
+        .next{
+            right: 0px;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                position: absolute;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                transition-delay: 0.3s;
+                .card {
+                    .card-body {
+                        .rating {
+                            input {
+                                z-index: 2;
+                            }
+                        }
+                        input[type=number] {
+                            z-index: 2;
+                        }
+                        .mt-3 {
+                            button {
+                                padding: 12px 30px;
+                                background: $main-green;
+                                border-radius: 5px;
+                                color: white;
+                                transition: all 0.3s ease-in-out;
+                                &:hover {
+                                    background-color: $main-orange;
+                                    color: black;
+                                }
+                            }
+                        }
+                        .nice-number {
+                            width: fit-content;
+                            position: relative;
+                            border: 0.1px $white-text solid;
+                            border-radius: 5px;
+                            &>*{
+                                padding: 10px 15px;
+                            }
+                            button {
+                                position: static !important;
+                                background-color: rgba(211, 211, 211, 0.24);
+                                color: $bg-gray;
+                                transition: all 0.3s ease-in-out;
+                                &:hover {
+                                    background-color: $main-green;
+                                    color: white;
+                                }
+                            }
+                            input {
+                                border: none;
+                                color: $bg-gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }      
+}

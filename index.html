@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links start-->
+    <link href="vendor/jquery/jquery.nice-number.css" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="vendor/css/bootstrap.css">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container p-2">
+            <div class="row py-1 pb-2">
+                <div class="col-md-5 col-sm-12 d-flex align-items-center">
+                    <div class="dropdown">
+                        <button id="drop1" class="dropbtn dropdown-toggle">Language</button>
+                        <span> |</span>
+                        <div id="myDropdown1" class="dropdown-content p-3">
+                            <a href="#">English</a>
+                            <a href="#about">Azərbaycanca</a>
+                            <a href="#contact">Türkçe</a>
+                            <a href="#contact">Русский</a>
+                        </div> 
+                    </div>
+                    <div class="dropdown">
+                        <button id="drop2" class="dropbtn dropdown-toggle">Currency</button>
+                        <span> |</span>
+                        <div id="myDropdown2" class="dropdown-content p-3">
+                            <a href="#">&#8364 Euro</a>
+                            <a href="#about">&#8356 Lira</a>
+                            <a href="#contact">&#8380 Manat</a>
+                            <a href="#contact">&#8381 Rubl</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button id="drop3" class="dropbtn dropdown-toggle">My Account</button>
+                        <div id="myDropdown3" class="dropdown-content p-3">
+                            <a href="#">Register</a>
+                            <a href="#about">Login</a>
+                            <a href="#contact">Checkout</a>
+                            <a href="#contact">Wish List(0)</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-7 col-sm-12 d-flex align-items-center justify-content-end">
+                    <a class="my-col-sm" href="tel:+">Need Help : <span>(+12) 456 789 123</span></a>
+                    <span> | </span>
+                    <span class="my-col-sm">New Offers This Weekend Only To Get Extra <strong>50% Discount</strong> On First !</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark p-4">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar d-flex align-items-center flex-grow-1 justify-content-start">
+              <a class="fw-bold" href="#">Blogs</a>
+              <div class="dropdown">
+                <button id="drop5" class="fw-bold dropbtn dropdown-toggle">Our Store</button>
+                <div id="myDropdown5" class="dropdown-content p-3">
+                  <div class="container">
+                    <div class="row">
+                      <div class="sub-category col-lg-4 col-md-6 col-sm-12">
+                        <a class="fw-bold" href="#">English</a>
+                        <ul>
+                          <li><a href="#">Biscuit & Cookies</a></li>
+                          <li><a href="#">Pasta $ Noodles</a></li>
+                          <li><a href="#">Dairy Products</a></li>
+                        </ul>
+                      </div>
+                      <div class="sub-category col-lg-4 col-md-6 col-sm-12">
+                        <a class="fw-bold" href="#">English</a>
+                        <ul>
+                          <li><a href="#">Biscuit & Cookies</a></li>
+                          <li><a href="#">Pasta $ Noodles</a></li>
+                          <li><a href="#">Dairy Products</a></li>
+                        </ul>
+                      </div>
+                      <div class="sub-category col-lg-4 col-md-6 col-sm-12">
+                        <a class="fw-bold" href="#">English</a>
+                        <ul>
+                          <li><a href="#">Biscuit & Cookies</a></li>
+                          <li><a href="#">Pasta $ Noodles</a></li>
+                          <li><a href="#">Dairy Products</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+              <div class="dropdown">
+                <button id="drop6" class="fw-bold dropbtn dropdown-toggle">Electronics</button>
+                <div id="myDropdown6" class="dropdown-content p-3 fw-normal">
+                    <a href="#">Evaporing printing</a>
+                    <a href="#about">Inject Printing</a>
+                </div>
+              </div>
+
+              <a class="fw-bold" href="#">Fashion</a>
+
+              <div class="dropdown">
+                <button id="drop7" class=" fw-bold dropbtn dropdown-toggle">More</button>
+                <div id="myDropdown7" class="dropdown-content p-3 fw-normal">
+                    <a href="#">Bags</a>
+                    <a href="#about">Beauty</a>
+                    <a href="#contact">Food</a>
+                    <a href="#contact">Footwear</a>
+                </div>
+              </div>
+              
+            </div>
+            
+            <form class="bg-white rounded">
+                <select class="b-none" name="category" id="category">
+                  <option value="All Category" disabled selected>All Category</option>
+                  <option value="34">Our store</option>
+                  <option value="43">Food &amp; Beverages</option>
+                  <option value="47">Biscuits &amp; Cookies</option>
+                  <option value="50">Pasta &amp; Noodles</option>
+                  <option value="28">Dairy Products</option>
+                  <option value="80">Home &amp; Living</option>
+                  <option value="81">Home Appliances</option>
+                  <option value="82">Pooja Needs </option>
+                  <option value="83">Utensil Cleaner </option>
+                  <option value="67">Personal Care</option>
+                  <option value="76">Dental Care </option>
+                  <option value="74">Face Care</option>
+                  <option value="75">Hair Care</option>
+                  <option value="49">Electronics</option>
+                  <option value="53">Evaporation printing</option>
+                  <option value="55">Inkjet printing</option>
+                  <option value="24">Fashion</option>
+                  <option value="86">Bags</option>
+                  <option value="70">Beauty</option>
+                  <option value="52">Rocking chair</option>
+                  <option value="84">Food</option>
+                  <option value="51">Appliances</option>
+                  <option value="88">Bangle</option>
+                  <option value="48">Black Velvet</option>
+                  <option value="89">Footwear</option>
+                  <option value="17">Sake Bomb</option>
+                  <option value="68">Flowers</option>
+                </select>
+                <span>|</span>
+                <input class="b-none" type="search" name="search" id="search" placeholder="Search Products">
+                <button type="submit">
+                  <i class="fa fa-search fs-4 fw-normal pe-3"></i>
+                </button>
+            </form>
+            <div class="cart-dropdown ms-3">
+              <button id="drop8" class="dropbtn">
+                <span class="fs-3">&#128722</span> <!--shopping cart-->
+                <span class="item-count fw-bold">0</span>
+              </button>
+              <div id="myDropdown8" class="dropdown-content p-3">
+                  <p>Your shopping cart is empty!</p>
+              </div> 
+          </div>
+          </div>
+        </div>
+    </nav>
+    <section id="first-s">
+      <div class="container p-4">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8 pe-4">
+            <div class="container p-0 m-0">
+              <div class="row">
+                <div class="col-12">
+                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner dairevi">
+                      <div class="carousel-item active">
+                        <img src="img/demo-banners/main-banner-01-1065x590.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/demo-banners/main-banner-02-1065x590.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/demo-banners/main-banner-03-1065x590.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-btn prev-btn fs-1 px-3" aria-hidden="true">&#11104</span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-btn next-btn fs-1 px-3" aria-hidden="true">&#11106</span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row my-4">
+                <ul class="d-flex">
+                  <li>
+                    <a href="#">
+                      <img class="my-img dairevi" src="img/demo-banners/sub-banner1.jpg" alt="">
+                    </a>
+                  </li>
+                  <li class=" mx-3">
+                    <a href="#">
+                      <img class="my-img dairevi" src="img/demo-banners/sub-banner2.jpg" alt="">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img class="my-img dairevi" src="img/demo-banners/sub-banner3.jpg" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="row mt-3 latest-p">
+                <h4 class="text-dark py-2 fw-bold">Latest Products</h4>
+                <div  data-carousel>
+                  <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+                  <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+                  <ul data-slides>
+                    <li data-active >
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-6 col-sm-12 pb-2">
+                            <div class="card dairevi me-3" style="width: fit-content;">
+                              <a href="#">
+                                <img src="img/clothes/1-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body">
+                                <div class="rate ps-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div>
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-sm-12 pb-2">
+                            <div class="card dairevi me-3" style="width: fit-content;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body">
+                                <div class="rate ps-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div>
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-6 col-sm-12 pb-2">
+                            <div class="card dairevi me-3" style="width: fit-content;">
+                              <a href="#">
+                                <img src="img/clothes/1-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body">
+                                <div class="rate ps-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div>
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-sm-12 pb-2">
+                            <div class="card dairevi me-3" style="width: fit-content;">
+                              <a href="#">
+                                <img src="img/clothes/1-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body">
+                                <div class="rate ps-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div>
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-auto p-0">
+            <div class="d-flex" style="height: 100%;">
+              <div class="vr"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 ms-4 shop-by-c">
+            <div class="container p-0">
+              <div class="row">
+                <h5 class="mb-4 text-dark fw-bold">Shop By Categories</h5>
+                <div class="col-lg-4 mb-2">
+                  <a href="#">
+                    <div class="card px-1 bg-light dairevi">
+                      <div class="d-flex justify-content-center align-items-center py-3">
+                        <img src="img/category-list/category_list1.svg" class="category-img" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text text-center">Fashion</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 mb-2">
+                  <a href="#">
+                    <div class="card px-1 bg-light dairevi">
+                      <div class="d-flex justify-content-center align-items-center py-3">
+                        <img src="img/category-list/category_list1.svg" class="category-img" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text text-center">Fashion</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 mb-2">
+                  <a href="#">
+                    <div class="card px-1 bg-light dairevi">
+                      <div class="d-flex justify-content-center align-items-center py-3">
+                        <img src="img/category-list/category_list1.svg" class="category-img" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text text-center">Fashion</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                
+                <div class="col-lg-4 mb-2">
+                  <a href="#">
+                    <div class="card px-1 bg-light dairevi">
+                      <div class="d-flex justify-content-center align-items-center py-3">
+                        <img src="img/category-list/category_list1.svg" class="category-img" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text text-center">Fashion</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 mb-2">
+                  <a href="#">
+                    <div class="card px-1 bg-light dairevi">
+                      <div class="d-flex justify-content-center align-items-center py-3">
+                        <img src="img/category-list/category_list1.svg" class="category-img" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text text-center">Fashion</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 mb-2">
+                  <a href="#">
+                    <div class="card px-1 bg-light dairevi">
+                      <div class="d-flex justify-content-center align-items-center py-3">
+                        <img src="img/category-list/category_list1.svg" class="category-img" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text text-center">Fashion</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row my-5">
+                <h5 class="mb-4 text-dark fw-bold">Best Selling</h5>
+                <div class="col-12">
+                  <div data-carousel>
+                    <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+                    <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+                    <ul data-slides>
+                      <li data-active>
+                        <div class="card dairevi" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body d-flex flex-column">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <a href="#">
+                              <h5 class="card-title fs-4">Card title</h5>
+                            </a>
+                            <p class="card-text text-dark fw-bolder fs-3">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3">
+                              <button class="p-static fw-bold text-uppercase button">Add To Cart</button> <!--+button class ile add to cart button hoveri enable oldu?-->
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li>
+                        <div class="card dairevi" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/1-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body d-flex flex-column">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <a href="#">
+                              <h5 class="card-title fs-4">Card title</h5>
+                            </a>
+                            <p class="card-text text-dark fw-bolder fs-3">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-brands">
+                <h5 class="mb-4 text-dark fw-bold">Top Brands</h5>
+                <div class="col-lg-12">
+                  <div data-carousel>
+                    <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+                    <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+                    <ul data-slides>
+                      <li data-active>
+                        <div class="row">
+                          <div class="col-6 mb-2">
+                            <div class="card" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/top-brands/1-104x55.png" class="card-img-top" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-6 mb-2">
+                            <div class="card" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/top-brands/2-104x55.png" class="card-img-top" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/top-brands/3-104x55.png" class="card-img-top" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/top-brands/4-104x55.png" class="card-img-top" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="row">
+                          <div class="col-6 mb-2">
+                            <div class="card" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/top-brands/5-104x55.png" class="card-img-top" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-6 mb-2">
+                            <div class="card" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/top-brands/1-104x55.png" class="card-img-top" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/top-brands/6-104x55.png" class="card-img-top" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/top-brands/7-104x55.png" class="card-img-top" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="yellow-discount" class="p-relativ">
+      <div class="container p-static">
+        <div class="row">
+          <div class="col-lg-12 p-4 d-flex align-items-center justify-content-center ">
+            <span class="anime-discount"></span>
+            <span class=" discount text-uppercase fw-bold text-dark p-relativ">
+            Get up tp 20% dicount on short clothing on order over $100 & more
+            </span>
+            <a class="ms-5 ps-5 text-dark fw-bold fs-5 text-uppercase" href="#">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="top-categories">
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-lg-6 col-md-3">
+            <h4 class="text-dark fw-bold">Top Categories</h4>
+          </div>
+          <div class="col-lg-auto col-md-9">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#our-store" type="button" role="tab" aria-controls="home" aria-selected="true">Our store</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#inject-printing" type="button" role="tab" aria-controls="profile" aria-selected="false">Inject Printing</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#beauty" type="button" role="tab" aria-controls="contact" aria-selected="false">Beauty</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#fashion" type="button" role="tab" aria-controls="contact" aria-selected="false">Fashion</button>
+              </li>
+            </ul>
+          </div>
+          <div class="col-1"></div>
+        </div>
+
+        <div class="row my-3">
+          <div class="col-12">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="our-store" role="tabpanel" aria-labelledby="home-tab">
+                <div data-carousel>
+                  <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+                  <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+                  <ul data-slides>
+                    <li data-active>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="inject-printing" role="tabpanel" aria-labelledby="profile-tab">
+                <div data-carousel>
+                  <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+                  <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+                  <ul data-slides>
+                    <li data-active>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="beauty" role="tabpanel" aria-labelledby="contact-tab">
+                <div data-carousel>
+                  <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+                  <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+                  <ul data-slides>
+                    <li data-active>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="fashion" role="tabpanel" aria-labelledby="contact-tab">
+                <div data-carousel>
+                  <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+                  <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+                  <ul data-slides>
+                    <li data-active>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="container px-0">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 pb-2">
+                            <div class="card dairevi me-3" style="width: 100%;">
+                              <a href="#">
+                                <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                              </a>
+                              <div class="card-body fit">
+                                <div class="rate px-0">
+                                  <input type="radio" id="star5" name="rate" value="5" />
+                                  <label for="star5" title="Exelent">5 stars</label>
+                                  <input type="radio" id="star4" name="rate" value="4" />
+                                  <label for="star4" title="Good">4 stars</label>
+                                  <input type="radio" id="star3" name="rate" value="3" />
+                                  <label for="star3" title="Normal">3 stars</label>
+                                  <input type="radio" id="star2" name="rate" value="2" />
+                                  <label for="star2" title="Bad">2 stars</label>
+                                  <input type="radio" id="star1" name="rate" value="1" />
+                                  <label for="star1" title="Awful">1 star</label>
+                                </div>
+                                <div class="w-fit">
+                                  <a href="#">
+                                    <h5 class="card-title fs-4">Card title</h5>
+                                  </a>  
+                                </div>
+                                <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                                <input type="number" value="1" min="1" name="" id="">
+                                <div class="p-relative mt-3 fit">
+                                  <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="counting">
+      <div class="container p-5">
+        <div class="row p-5">
+          <div class="col-12 text-center p-5">
+            <p class="fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eius.</p>
+            <a href="#">
+              <h3 class="fs-1 py-2">Lorem ipsum dolor sit amet consectetur.</h3>
+            </a>
+            <div class="fs-1 fw-bold px-3 py-2 mt-5" id="getting-started"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="specials">
+      <div class="container py-3">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-lg-2 col-md-auto col-sm-auto text-center">
+            <span id="icon-img-1" class="icon-img"></span>
+            <span class="text-white">FAST & FREE SHIPPING</span>
+          </div>
+
+          <div class="col-auto p-0">
+            <div class="d-flex" style="height: 100%;">
+              <div class="vr"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-auto col-sm-auto text-center">
+            <span id="icon-img-2" class="icon-img"></span>
+            <span class="text-white">FAST & FREE SHIPPING</span>
+          </div>
+
+          <div class="col-auto p-0">
+            <div class="d-flex" style="height: 100%;">
+              <div class="vr"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-auto col-sm-auto text-center">
+            <span id="icon-img-3" class="icon-img"></span>
+            <span class="text-white">FAST & FREE SHIPPING</span>
+          </div>
+
+          <div class="col-auto p-0">
+            <div class="d-flex" style="height: 100%;">
+              <div class="vr"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-auto col-sm-auto text-center">
+            <span id="icon-img-4" class="icon-img"></span>
+            <span class="text-white">FAST & FREE SHIPPING</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="feature-products">
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="text-dark fw-bold">Feature Products</h4>
+          </div>
+          <div class="col-12 pt-3">
+            <div data-carousel>
+              <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+              <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+              <ul data-slides>
+                <li data-active>
+                  <div class="container px-0">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body fit">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <div class="w-fit">
+                              <a href="#">
+                                <h5 class="card-title fs-4">Card title</h5>
+                              </a>  
+                            </div>
+                            <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3 fit">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body fit">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <div class="w-fit">
+                              <a href="#">
+                                <h5 class="card-title fs-4">Card title</h5>
+                              </a>  
+                            </div>
+                            <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3 fit">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body fit">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <div class="w-fit">
+                              <a href="#">
+                                <h5 class="card-title fs-4">Card title</h5>
+                              </a>  
+                            </div>
+                            <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3 fit">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body fit">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <div class="w-fit">
+                              <a href="#">
+                                <h5 class="card-title fs-4">Card title</h5>
+                              </a>  
+                            </div>
+                            <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3 fit">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="container px-0">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body fit">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <div class="w-fit">
+                              <a href="#">
+                                <h5 class="card-title fs-4">Card title</h5>
+                              </a>  
+                            </div>
+                            <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3 fit">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body fit">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <div class="w-fit">
+                              <a href="#">
+                                <h5 class="card-title fs-4">Card title</h5>
+                              </a>  
+                            </div>
+                            <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3 fit">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body fit">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <div class="w-fit">
+                              <a href="#">
+                                <h5 class="card-title fs-4">Card title</h5>
+                              </a>  
+                            </div>
+                            <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3 fit">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3" style="width: 100%;">
+                          <a href="#">
+                            <img src="img/clothes/5-318x318.jpg" class="card-img-top" alt="...">
+                          </a>
+                          <div class="card-body fit">
+                            <div class="rate px-0">
+                              <input type="radio" id="star5" name="rate" value="5" />
+                              <label for="star5" title="Exelent">5 stars</label>
+                              <input type="radio" id="star4" name="rate" value="4" />
+                              <label for="star4" title="Good">4 stars</label>
+                              <input type="radio" id="star3" name="rate" value="3" />
+                              <label for="star3" title="Normal">3 stars</label>
+                              <input type="radio" id="star2" name="rate" value="2" />
+                              <label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rate" value="1" />
+                              <label for="star1" title="Awful">1 star</label>
+                            </div>
+                            <div class="w-fit">
+                              <a href="#">
+                                <h5 class="card-title fs-4">Card title</h5>
+                              </a>  
+                            </div>
+                            <p class="card-text text-dark fw-bolder fs-3 fit">$60</p>
+                            <input type="number" value="1" min="1" name="" id="">
+                            <div class="p-relative mt-3 fit">
+                              <button class="p-static fw-bold text-uppercase">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="testimonial">
+      <div class="container px-5 pb-5">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="text-dark fw-bold">Testimonial</h4>
+          </div>
+          <div class="col-12 pt-3">
+            <div data-carousel>
+              <button data-btn="prev" class="prev"><span class="fs-1">&#11104</span></button>
+              <button data-btn="next" class="next"><span class="fs-1">&#11106</span></button>
+              <ul data-slides>
+                <li data-active>
+                  <div class="container px-0">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3 bg-light h-fit" style="width: 100%;">
+                          <img src="img/testimo/person1.jpg" class="testimo-img ps-3 pt-3 dairevi" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#">
+                                <h5 class="card-title">Card title</h5>
+                              </a>
+                              <a href="#">
+                                <p>
+                                  Designer
+                                </p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3 bg-light h-fit" style="width: 100%;">
+                          <img src="img/testimo/person3.jpg" class="testimo-img ps-3 pt-3 dairevi" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#">
+                                <h5 class="card-title">Card title</h5>
+                              </a>
+                              <a href="#">
+                                <p>
+                                  Designer
+                                </p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3 bg-light h-fit" style="width: 100%;">
+                          <img src="img/testimo/person2.jpg" class="testimo-img ps-3 pt-3 dairevi" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#">
+                                <h5 class="card-title">Card title</h5>
+                              </a>
+                              <a href="#">
+                                <p>
+                                  Designer
+                                </p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3 bg-light h-fit" style="width: 100%;">
+                          <img src="img/testimo/person3.jpg" class="testimo-img ps-3 pt-3 dairevi" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#">
+                                <h5 class="card-title">Card title</h5>
+                              </a>
+                              <a href="#">
+                                <p>
+                                  Designer
+                                </p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="container px-0">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3 bg-light h-fit" style="width: 100%;">
+                          <img src="img/testimo/person2.jpg" class="testimo-img ps-3 pt-3 dairevi" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Neque rerum nostrum non alias eos, aspernatur nihil quo sunt corporis suscipit.</p>
+                              <a href="#">
+                                <h5 class="card-title">Card title</h5>
+                              </a>
+                              <a href="#">
+                                <p>
+                                  Designer
+                                </p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3 bg-light h-fit" style="width: 100%;">
+                          <img src="img/testimo/person2.jpg" class="testimo-img ps-3 pt-3 dairevi" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Neque rerum nostrum non alias eos, aspernatur nihil quo sunt corporis suscipit.</p>
+                              <a href="#">
+                                <h5 class="card-title">Card title</h5>
+                              </a>
+                              <a href="#">
+                                <p>
+                                  Designer
+                                </p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3 bg-light h-fit" style="width: 100%;">
+                          <img src="img/testimo/person2.jpg" class="testimo-img ps-3 pt-3 dairevi" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Neque rerum nostrum non alias eos, aspernatur nihil quo sunt corporis suscipit.</p>
+                              <a href="#">
+                                <h5 class="card-title">Card title</h5>
+                              </a>
+                              <a href="#">
+                                <p>
+                                  Designer
+                                </p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-6 pb-2">
+                        <div class="card dairevi me-3 bg-light h-fit" style="width: 100%;">
+                          <img src="img/testimo/person2.jpg" class="testimo-img ps-3 pt-3 dairevi" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Neque rerum nostrum non alias eos, aspernatur nihil quo sunt corporis suscipit.</p>
+                              <a href="#">
+                                <h5 class="card-title">Card title</h5>
+                              </a>
+                              <a href="#">
+                                <p>
+                                  Designer
+                                </p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container p-5">
+        <div class="row p-5 d-flex justify-content-center">
+          <div class="col-lg-3 col-md-5 px-5">
+            <h4 class="pb-3 text-white">Store Information</h4>
+            <h5 class="text-white pb-2">Address:
+              <span class="px-0 fs-5 fw-normal">507-utc</span>
+              <span class="px-0 fs-5 fw-normal d-block">Near Apple Hospital</span>
+              <span class="px-0 fs-5 fw-normal d-block"> Ring Road surat, 395002</span>
+            </h5>
+            <h5 class="text-white pb-2">Call Us: <span class="px-0"><a class="fs-5 fw-normal" href="tel:+91 2598568742">+91 2598568742</a></span></h5>
+            <h5 class="text-white pb-2">Email Us: <span class="px-0"><a class="fs-5 fw-normal" href="mailto:support@company.com">support@company.com</a></span></h5>
+          </div>
+
+          <div class="col-lg-auto col-md-5 px-5">
+            <h4 class="pb-3 text-white">Extras</h4>
+            <a class="d-block fs-5 pb-2" href="#">Contact Us</a>
+            <a class="d-block fs-5 pb-2" href="#">About Us</a>
+            <a class="d-block fs-5 pb-2" href="#">Delivery Information</a>
+            <a class="d-block fs-5 pb-2" href="#">Privacy Policy</a>
+            <a class="d-block fs-5 pb-2" href="#">Terms & Conditions</a>
+
+          </div>
+
+          <div class="col-lg-auto col-md-5 px-5">
+            <h4 class="pb-3 text-white">Information</h4>
+            <a class="d-block fs-5 pb-2" href="#">My Account</a>
+            <a class="d-block fs-5 pb-2" href="#">Order History</a>
+            <a class="d-block fs-5 pb-2" href="#">Wish List</a>
+            <a class="d-block fs-5 pb-2" href="#">Affiliaties</a>
+            <a class="d-block fs-5 pb-2" href="#">Returns</a>
+          </div>
+
+          <div class="col-lg-auto col-md-5 px-5">
+            <h4 class="pb-3 text-white">Download App</h4>
+            <a class="d-block" href="#">
+              <img src="img/demo-banners/app1.png" alt="">
+            </a>
+            <a class="d-block py-2" href="#">
+              <img src="img/demo-banners/app2.png" alt="">
+            </a>
+            <a class="d-block" href="#">
+              <img src="img/demo-banners/app3.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-0">
+
+      <div class="container-fluid d-flex justify-content-center">
+        <div class="row py-3">
+          <div class="col-lg-auto col-md-auto col-sm-12 d-flex justify-content-center align-items-center">
+            <h5 class="d-inline-block text-white pe-3">Follow Us</h5>
+            <a class="px-4" href="#">
+              <i class="my-icon fa fa-facebook"></i>
+            </a>
+            <div class="vr"></div>
+            <a class="px-4" href="#">
+              <i class="my-icon fa fa-twitter"></i>
+            </a>
+            <div class="vr"></div>
+            <a class="px-4" href="#">
+              <i class="my-icon fa fa-youtube"></i>
+            </a>
+            <div class="vr"></div>
+            <a class="px-4" href="#">
+              <i class="my-icon fa fa-pinterest"></i>
+            </a>
+            <div class="vr"></div>
+            <a class="px-4" href="#">
+              <i class="my-icon fa fa-instagram"></i>
+            </a>
+          </div>
+          <div class="col-auto d-flex align-items-center">
+            <div class="d-flex" style="height: 200%;">
+              <div class="vr"></div>
+            </div>
+          </div>
+          <div class="col-lg-auto col-md-auto col-sm-12 d-flex justify-content-center align-items-center">
+            <h5 class="d-inline-block text-white pe-3">Payment method</h5>
+            <a class="px-1" href="#">
+              <img class="rounded" src="img/demo-banners/paypal.jpg" alt="">
+            </a>
+            <div class="vr"></div>
+            <a class="px-1" href="#">
+              <img class="rounded" src="img/demo-banners/visa.jpg" alt="">
+            </a>
+            <div class="vr"></div>
+            <a class="px-1" href="#">
+              <img class="rounded" src="img/demo-banners/maestro.jpg" alt="">
+            </a>
+            <div class="vr"></div>
+            <a class="px-1" href="#">
+              <img class="rounded" src="img/demo-banners/master.jpg" alt="">
+            </a>
+            <div class="vr"></div>
+            <a class="px-1" href="#">
+              <img class="rounded" src="img/demo-banners/discover.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="text-white fw-bold" id="to-top" onclick="topFunction()">TOP</button>
+    <!-- END -->
+    <script src="vendor/js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+    <script src="vendor/jquery/jquery.nice-number.js"></script>
+    <!--Plugins for Timer-->
+    <script src="vendor/jquery/jquery.countdown.min.js"></script>
+    <script type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+@import "variables";
+@import "mixins";
+@import "header";
+@import "responsive-home";
+@import "home";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $white-text;
+    transition: color 0.3s ease-in-out;
+    font-size: 12px;
+}
+#to-top {
+    position: fixed; 
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9;
+    background-color: $main-green;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem 0.7rem;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+    &:hover {
+        opacity: 1;
+    }
+}
+a {
+    text-decoration: none !important;
+}
+span {
+    color: #b7b7b7 !important;
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+}
+// custom css starts
+.b-none {
+    border: none;
+}
+.w-fit {
+    width: fit-content;
+}
+.h-fit {
+    height: fit-content;
+}
+.dairevi {
+    border-radius: 5px !important;
+}
+.my-img {
+    max-width: 100%;
+    height: auto;
+}
+.testimo-img {
+    height: auto;
+    width: 10rem;
+}
+[data-active] {
+    opacity: 1 !important;
+}
+.p-relativ {
+    position: relative;
+}
+.p-static {
+    position: static !important;
+}
+.sticky {
+    position: fixed !important;
+    top: 0;
+    z-index: 3;
+}
+// custom css ends
+
+// rate css starts
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    width: fit-content;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:0.8em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:2rem;
+    color:#ccc;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #ffd200;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+// rate css ends

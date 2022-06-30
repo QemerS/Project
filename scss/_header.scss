@@ -1,0 +1,139 @@
+@import "variables";
+@import "mixins";
+header {
+    background-color: $bg-gray;
+    .container {
+        div {
+            .col-md-5 {
+                .dropdown {
+                    @include dropdown-btn(inherit, inherit,
+                                        0px, 0px, $main-green);
+                    @include dropdown-content(white, 170%,
+                    -15%);
+                }
+            }
+            .col-md-7 {
+                a {
+                    color: $white-text;
+                    padding: 0;
+                    margin: 0;
+                    span {
+                        color: $main-orange !important;
+                    }
+                }
+                span {
+                    strong {
+                        color: $main-orange
+                    }
+                }
+            }
+        }
+    }
+}
+nav {
+    background-color: $dark-green;
+    width: 100%;
+    position: inherit !important;
+    top: unset;
+    transition: all 0.4s ease-in-out;
+    .collapse{
+        .navbar {
+            &>* {
+                padding-left: 20px;
+            }
+            a {
+                color: white;
+                &:hover {
+                    color: $main-green;
+                    transition: color 0.3s;
+                }
+            }
+            .dropdown {
+                position: relative;
+                @include dropdown-btn(inherit,
+                                    white, 0px 0px 0px 20px,
+                                    0px, $main-green);
+                @include dropdown-content(yellow,
+                                        316%, 30%);
+                .dropdown-content {
+                    .container {
+                        .row {
+                            .sub-category  {
+                                a {
+                                    padding-left: 24px;
+                                    &:hover{
+                                        color: $main-green;
+                                    }
+                                }
+                                ul {
+                                    li {
+                                        a {
+                                            font-weight: 400;
+                                            padding-left: 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+        form {
+            width: fit-content;
+            border-radius: 5px;
+            select {
+                border-radius: 5px;
+                font-weight: 400;
+                color: $bg-gray;
+                width: 130px;
+                height: 43px;
+                &:focus{
+                    outline: none;
+                }
+                option {
+                    text-align: center;
+                    color: inherit;
+                }
+            }
+            input {
+                &:focus{
+                    outline: none;
+                }
+            }
+            button {
+                border: none;
+                background-color: white;
+                i {
+                    padding: 6px;
+                    color: $bg-gray;
+                    text-align: center;
+                    &:hover {
+                        color: $main-green;
+                    }
+                }
+            }
+        }
+        .cart-dropdown {
+            position: relative;
+            @include dropdown-btn($main-green, white,
+                                6px, 5px,
+                                black);
+            .dropbtn {
+                .item-count {
+                    background-color: $main-orange;
+                    border-radius: 10px;
+                    color: black !important;
+                    position: absolute;
+                }
+                &:hover .item-count {
+                    background-color: white !important;
+                }
+                &:hover {
+                    background-color: $main-orange;
+                }
+            }
+            @include dropdown-content(yellow, 160%,-186%);
+        }
+    }
+}
